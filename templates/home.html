@@ -1,0 +1,23 @@
+
+    <div class="chat-box">
+        <h2>Chatbot</h2>
+        <form method="post" action='/'>
+            <input type="text" name="user_input" placeholder="Type your message..." required autofocus>
+            <button type="submit">Send</button>
+        </form>
+
+
+        <div>
+            {% if chatBot_messages %}
+                {% for msg in chatBot_messages %}
+                    <div class="message">
+                        {% if loop.index is odd %}
+                            <span class="user"><strong>User:</strong> {{ msg }}</span>
+                        {% else %}
+                            <span class="assistant"><strong>Bot:</strong> {{ msg }}</span>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>

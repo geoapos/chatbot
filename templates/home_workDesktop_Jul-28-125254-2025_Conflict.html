@@ -1,0 +1,22 @@
+
+<form action="/" method="post">
+
+    <div>
+        <textarea placeholder="add input here" rows="3"></textarea>
+        <button type="submit">Send</button>
+    </div>
+</form>
+
+
+<div>
+
+    Chat History
+
+    {% for response in chat_responses %}
+        -{{response}}
+    {% endfor %}
+
+    
+
+
+</div>
